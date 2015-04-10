@@ -1,0 +1,39 @@
+/* --------------------------------------------------------------
+	Variables
+-------------------------------------------------------------- */
+
+$rem-base: 16px !default;
+
+/**
+ * Colors
+ */
+
+$gray-darker:  #222;
+$gray-dark:    #333;
+$gray:         #444;
+$gray-light:   #999;
+$gray-lighter: #dee1e5;
+
+$seashell: #F1F1F1;
+$mine: #2e2e2e;
+$matisse: #21759b;
+
+/**
+ * Typography
+ */
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+$sans-serif: 'Open Sans', $georgia, serif;
+
+/**
+ * Responsive breakpoints
+ */
+$small-screen: new-breakpoint(min-width 321px);
+$medium-screen: new-breakpoint(min-width 641px);
+$large-screen: new-breakpoint(min-width 1025px);
+$xlarge-screen: new-breakpoint(min-width 1441px);
+$xxlarge-screen: new-breakpoint(min-width 1921px);
+
+
+
+

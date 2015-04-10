@@ -1,0 +1,33 @@
+/* --------------------------------------------------------------
+	Header
+-------------------------------------------------------------- */
+
+.site-branding {
+	@include span-columns(2);
+}
+
+.site-title {
+	margin: 0;
+	max-width: rem(120);
+	display: inline-block;
+	width: rem(95);
+	@include media($large-screen){
+		margin: rem(20) 0 rem(10);
+		width: 100%;
+	}
+}
+
+.page-header {
+	background-color: white;
+	@include media($medium-screen) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 113;
+		display: block;
+	}
+	> .container {
+		@extend .row;
+	}
+}

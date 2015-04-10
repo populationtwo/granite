@@ -1,0 +1,19 @@
+/* --------------------------------------------------------------
+	Footer
+-------------------------------------------------------------- */
+
+.footer-wrapper {
+	background: #8a8574;
+	color: $gray-lighter;
+	a {
+		color: white(0.8);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.page-footer {
+	@include outer-container();
+	@extend .row;
+}
