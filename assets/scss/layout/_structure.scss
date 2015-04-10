@@ -11,47 +11,43 @@
 	padding: 0 rem(15);
 }
 
+//hero
+.hero-header {
+	figure img {
+		width: 100%;
+		max-width: 100%;
+	}
+}
 .section-wrap {
 	padding: rem(30) 0;
 	@include media($medium-screen) {
 		padding: rem(50) 0;
 	}
-	h2 {
-		text-align: center;
-		font-family: $sans-serif;
-		font-size: rem(26);
-		text-transform: uppercase;
-		letter-spacing: rem-calc(4);
-		color: white;
-		display: inline-block;
-		line-height: 1;
-		@include media($medium-screen) {
-			border-bottom: 4px solid white(0.15);
-			line-height: 2.2;
-		}
-	}
-	&.alt h2 {
-		color: black;
-		@include media($medium-screen) {
 
-			border-bottom: 4px solid black(0.15);
-		}
-
-	}
 }
 
 /* --------------------------------------------------------------
 	Blog
 -------------------------------------------------------------- */
-.blog-intro {
+.section-intro {
 	color: black(0.8);
 	text-align: center;
 	margin: 0 auto rem(60);
 	float: none;
 	width: 100%;
 	@extend .row;
-	p {
-		font-style: italic;
+	h1 {
+		color: $gray;
+		margin-bottom: 0;
+	}
+	h2 {
+		color: $gray-light;
+		text-align: center;
+		font-family: $sans-serif;
+		font-size: rem(20);
+		display: inline-block;
+		font-weight: 300;
+		margin-top: 0;
 	}
 	@include media($medium-screen) {
 		width: 73%;
@@ -75,7 +71,6 @@
 
 .post {
 	a {
-		color: $gray;
 		text-decoration: none;
 		&:hover, &:focus {
 			text-decoration: underline;
@@ -87,7 +82,7 @@
 	text-align: center;
 	margin-bottom: rem(25);
 	h1 {
-		font-size: rem(24);
+		font-size: rem(18);
 		font-family: $sans-serif;
 		line-height: 1.4;
 		color: black;
@@ -95,15 +90,15 @@
 			color: black;
 		}
 	}
-	.entry-meta {
-		color: black(0.6);
-		font-size: rem(14);
-		a {
-			color: black(0.6);
-		}
-	}
 }
 
+.entry-content {
+	text-align: center;
+	p {
+		color: $gray-light;
+		font-size: rem(14);
+	}
+}
 .post-thumbnail {
 	display: inline-block;
 	width: 100%;

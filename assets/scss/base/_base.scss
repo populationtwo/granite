@@ -170,20 +170,34 @@ figure {
 }
 
 .button {
-	background: $gray-lighter;
+	background: white;
 	font-size: rem(14);
-	padding: rem(10) rem(18);
+	padding: rem(10) rem(22);
 	font-weight: normal;
 	margin: rem(6) 0;
 	margin-right: rem(12);
 	display: inline-block;
 	text-decoration: none;
+	text-transform: uppercase;
 	min-width: rem(120);
-	font-style: italic;
+	color: $apple;
+	border: 2px solid $apple;
+	font-weight: 700;
+	@include border-top-radius(5px);
+	@include border-bottom-radius(5px);
+	@include transition(all 0.2s ease-out);
+
 	&:hover, &:active {
-		color: #fff;
-		background: $gray;
+		background: lighten($apple, 40%);
 		text-decoration: none !important;
 	}
 }
 
+.overlay {
+		background: linear-gradient(rgba(6,11,39,.4),rgba(0,0,0,0));
+		height: 600px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+}
