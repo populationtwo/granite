@@ -169,6 +169,7 @@ figure {
 	color: transparent;
 }
 
+
 .button {
 	background: white;
 	font-size: rem(14);
@@ -194,10 +195,23 @@ figure {
 }
 
 .overlay {
-		background: linear-gradient(rgba(6,11,39,.4),rgba(0,0,0,0));
-		height: 600px;
+		background: linear-gradient(rgba(44,86,37,.3),rgba(44,86,37,.2));
+		height: 100%;
 		position: absolute;
 		top: 0;
 		width: 100%;
 
+}
+
+.text-drop-shadow {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+}
+.subtitle {
+	font-size: rem(30);
+	font-weight: 400;
+	color: #FFF;
+}
+.title {
+	font-size: rem(70);
+	color: #FFF;
 }
