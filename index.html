@@ -50,7 +50,7 @@
 	<div class="content-wrap canvas-content-wrap" id="content">
 		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-		<header class="page-header">
+		<header class="page-header" role="banner">
 			<div class="container">
 				<div class="site-branding">
 					<h1 class="site-title"><a href="" rel="home">
@@ -104,6 +104,7 @@
 					<div class="container">
 						<div class="section-intro">
 							<h1>Section 1</h1>
+
 							<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
 						</div>
 						<div class="section-content">
@@ -119,7 +120,8 @@
 								<div class="entry-content">
 									<p>Nothing fancy here. Just some cute pets, some cute homes and some fun, furry
 										escapism. Take a minute to scroll through this collection of sweetie pie pets
-										from our recent house tours, and we promise your day will improve. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										from our recent house tours, and we promise your day will improve. Lorem ipsum
+										dolor sit amet, consectetur adipisicing elit.</p>
 
 									<p><a class="button" href="">Read More</a></p>
 
@@ -201,12 +203,16 @@
 		</div>
 		<!-- end .content-main -->
 
-		<div class="footer-wrapper">
-			<footer class="page-footer" role="contentinfo">
 
-				<h3>Sign up for our newsletter to receive the latest news about our company.</h3>
 
-				<form action="">
+	</div>
+	<!-- .content-wrap -->
+	<div class="footer-wrapper sticky-footer">
+		<footer class="page-footer" role="contentinfo">
+
+			<h3>Sign up for our newsletter to receive the latest news about our company.</h3>
+
+			<form action="">
 
 				<label>Select Box
 					<select>
@@ -217,17 +223,13 @@
 						<option value="4">Apollo</option>
 					</select>
 				</label>
-					<input class="input-email" type="email" name="email" placeholder="your email address">
-					<input class="button" type="submit" value="Subscribe">
-				</form>
+				<input class="input-email" type="email" name="email" placeholder="your email address">
+				<input class="button" type="submit" value="Subscribe">
+			</form>
 
-			</footer>
-			<!-- end .page-footer -->
-		</div>
-
+		</footer>
+		<!-- end .page-footer -->
 	</div>
-	<!-- .content-wrap -->
-
 </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>

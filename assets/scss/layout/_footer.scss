@@ -3,8 +3,10 @@
 -------------------------------------------------------------- */
 
 .footer-wrapper {
-	background: #8a8574;
+	background: #8a8574 url("../img/footer-bg.jpg") top center no-repeat;
 	color: $gray-lighter;
+	overflow: hidden;
+
 	a {
 		color: white(0.8);
 		&:hover {
@@ -16,4 +18,19 @@
 .page-footer {
 	@include outer-container();
 	@extend .row;
+	text-align: center;
+margin-top: rem(40);
+margin-bottom: rem(40);
+h3 {
+		font-size: rem(18);
+		font-weight: 300;
+		color: #ffffff;
+	}
+}
+
+
+
+
+.sticky-footer {
+	height: 234px;
 }
