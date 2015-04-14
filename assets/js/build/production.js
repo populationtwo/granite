@@ -2,21 +2,13 @@
 
 	$( document ).ready( function () {
 
-
-		$( '' ).addClass( 'animated fadeIn' );
 		//Declare all variables
 		var bodyElement = document.body,
-			$heroHeader = $( document.getElementById( 'hero-header' ) ),
-			$mainMenuLink = $( document.getElementById( 'site-navigation' ) ).find( ' a[href^="#"]' ),
-			$mainMenuAllLinks = $( document.getElementById( 'site-navigation' ) ).find( 'a' ),
-			$portfolioCloseOverlay = $( '.close-overlay' ),
-			$portfolioPhoto = $( '.photo' ),
-			$blog = $( '#blog-posts' ),
+			$blog = $( document.getElementById( 'blog-posts' ) ),
+			$intro = $( '.hero-content' ),
 			toggleMobileMenu = document.getElementById( 'js-mobile-menu' ),
 			contentWrap = document.querySelector( '.content-wrap' ),
-			numberAnimationIsExecuted = false,
-			$intro = $( '.hero-content' ),
-
+			$outerWrap = $( '.outer-wrapper' ),
 			isOpen = false;
 
 
@@ -37,9 +29,9 @@
 		}
 
 		/**
-		 * Animate skills graph
+		 * Initial load animation
 		 */
-		function checkGraphAnimation() {
+		function checkBlogAnimation() {
 			if ($blog.hasClass( 'animated' )) return;
 			if (checkElementInViewport( '#blog-posts' )) {
 				$blog.addClass( 'animated fadeIn' );
@@ -47,9 +39,7 @@
 		}
 
 		function checkIntroAnimation() {
-
 			$intro.addClass( 'animated fadeIn' );
-
 		}
 
 
@@ -79,18 +69,24 @@
 
 		// Capture scroll events
 		$( window ).scroll( function () {
-			checkGraphAnimation();
+			checkBlogAnimation();
 		} );
 
-		$( '.outer-wrapper' ).on( 'swipeleft', function (e) {
-			alert( 'asdfsdf' );
+
+		/**
+		 * Swipe event handler
+		 */
+		$outerWrap.on( 'swipeleft', function (e) {
+			toggleCanvasMenu();
+		} );
+		$outerWrap.on( 'swiperight', function (e) {
+			toggleCanvasMenu();
 		} );
 
 
 		function init() {
 			initCanvasMenu();
 			checkIntroAnimation();
-
 		}
 
 		init();
