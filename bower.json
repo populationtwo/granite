@@ -19,6 +19,7 @@
     "normalize.css": "~3.0.3"
   },
   "devDependencies": {
+	  "classie": "~1.0.1"
 
   }
 }

@@ -1,6 +1,9 @@
 (function (window, $, undefined) {
 
 	$( document ).ready( function () {
+
+
+			$('').addClass('animated fadeIn');
 		//Declare all variables
 		var bodyElement = document.body,
 			$heroHeader = $( document.getElementById( 'hero-header' ) ),
@@ -8,47 +11,13 @@
 			$mainMenuAllLinks = $( document.getElementById( 'site-navigation' ) ).find( 'a' ),
 			$portfolioCloseOverlay = $( '.close-overlay' ),
 			$portfolioPhoto = $( '.photo' ),
-			$graph = $( '.skill' ),
+			$blog = $( '#blog-posts' ),
 			toggleMobileMenu = document.getElementById( 'js-mobile-menu' ),
 			contentWrap = document.querySelector( '.content-wrap' ),
 			numberAnimationIsExecuted = false,
-			isOpen = false;
+			$intro = $( '.hero-content' ),
 
-
-		/**
-		 * Initiate hero slider
-		 */
-		function initSlider() {
-			$heroHeader.owlCarousel( {
-				navigation     : true, // Show next and prev buttons
-				slideSpeed     : 300,
-				paginationSpeed: 400,
-				singleItem     : true,
-				navigationText : ['<i class="icon-left-open"></i>', '<i class="icon-right-open"></i>']
-			} );
-		}
-
-		/**
-		 * Scroll navigation
-		 */
-		function scrollNavigation() {
-			var document = $( document );
-
-			$mainMenuLink.on( 'click', function (e) {
-				e.preventDefault();
-				document.off( "scroll" );
-				$mainMenuAllLinks.each( function () {
-					$( this ).removeClass( 'active' );
-				} );
-				$( this ).addClass( 'active' );
-
-				var target = this.hash;
-				$target = $( target );
-				$( 'html, body' ).stop().animate( {
-					'scrollTop': $target.offset().top + 2
-				}, 400, 'swing' );
-			} );
-		}
+				isOpen = false;
 
 
 		/**
@@ -71,84 +40,19 @@
 		 * Animate skills graph
 		 */
 		function checkGraphAnimation() {
-			if ($graph.hasClass( 'anim' )) return;
-			if (checkElementInViewport( '#about' )) {
-				$graph.addClass( 'anim' );
+			if ($blog.hasClass( 'animated' )) return;
+			if (checkElementInViewport( '#blog-posts' )) {
+				$blog.addClass( 'animated fadeIn' );
 			}
 		}
 
-		/**
-		 * Animate portfolio hover
-		 */
-		function imageHover() {
-			if (Modernizr.touch) {
+		function checkIntroAnimation() {
 
-				// Show the close overlay button on mobile device
-				$portfolioCloseOverlay.removeClass( 'hidden' );
+				$intro.addClass( 'animated fadeIn' );
 
-				// Add hover class when tapped / clicked
-				$portfolioPhoto.click( function (e) {
-					e.preventDefault();
-					if (!$( this ).hasClass( 'hover' )) {
-						$( this ).addClass( 'hover' );
-					}
-				} );
-
-				// handle the closing of the overlay
-				$portfolioCloseOverlay.click( function (e) {
-					e.preventDefault();
-					e.stopPropagation();
-					if ($( this ).closest( '.photo' ).hasClass( 'hover' )) {
-						$( this ).closest( '.photo' ).removeClass( 'hover' );
-					}
-				} );
-
-			} else {
-
-				$portfolioPhoto.hover( function () {
-					$( this ).addClass( 'hover' );
-				}, function () {
-					$( this ).removeClass( 'hover' );
-				} );
-
-			}
 		}
 
-		/**
-		 * Animate stats number
-		 */
 
-		function checkAnimateStats() {
-			var numberShutters = $( '.animate-number-shutters' ),
-				numberClients = $( '.animate-number-clients' ),
-				numberProjects = $( '.animate-number-projects' ),
-				numberHours = $( '.animate-number-hours' );
-
-			if (checkElementInViewport( '#stats-animate-number' )) {  // check if the #stat section is in viewport
-
-				if (!numberAnimationIsExecuted) { // check if the number has been animated
-					numberAnimationIsExecuted = true;
-					numberShutters.animateNumber( {
-						number: 86,
-						easing: 'easeInOut'
-					}, 1000 );
-					numberClients.animateNumber( {
-						number: 251,
-						easing: 'easeInOut'
-					}, 1100 );
-					numberProjects.animateNumber( {
-						number: 658,
-						easing: 'easeInOut'
-
-					}, 1300 );
-					numberHours.animateNumber( {
-						number: 16,
-						easing: 'easeInOut'
-					}, 900 );
-				}
-
-			}
-		}
 
 		/**
 		 * Mobile Menu
@@ -177,15 +81,13 @@
 		// Capture scroll events
 		$( window ).scroll( function () {
 			checkGraphAnimation();
-			checkAnimateStats();
 		} );
 
 
 		function init() {
 			initCanvasMenu();
-			initSlider();
-			scrollNavigation();
-			imageHover();
+			checkIntroAnimation();
+
 		}
 
 		init();

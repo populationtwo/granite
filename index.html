@@ -14,6 +14,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+	<link rel="stylesheet" href="	bower_components/animate.css/animate.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script src="bower_components/modernizr/modernizr.js"></script>
 </head>
@@ -27,7 +28,7 @@
 	<nav class="mobile-header-inner">
 		<div class="mobile-header-content">
 			<a href="http://localhost/wordpress8/">
-				<img src="http://localhost/wordpress8/wp-content/themes/photo-love/assets/img/photo-love-logo-grey.jpg" alt="Harris Pub">
+				<img src="assets/img/logo.png" alt="Logo">
 			</a>
 		</div>
 		<button class="menu-btn" id="js-mobile-menu">Open Menu</button>
@@ -213,18 +214,26 @@
 			<h3>Sign up for our newsletter to receive the latest news about our company.</h3>
 
 			<form action="">
+				<div class="dropdown">
 
-				<label>Select Box
+					<span class="simple-dropdown">
 					<select>
 						<option value="default">Select your country</option>
-						<option value="1">Husker</option>
-						<option value="2">Starbuck</option>
-						<option value="3">Hot Dog</option>
-						<option value="4">Apollo</option>
+						<option value="1">Amestris</option>
+						<option value="2">Bialya</option>
+						<option value="3">Blefuscu</option>
+						<option value="4">Chernarus</option>
 					</select>
-				</label>
-				<input class="input-email" type="email" name="email" placeholder="your email address">
-				<input class="button" type="submit" value="Subscribe">
+						</span>
+					</div>
+
+				<div class="input">
+					<input class="input-email" type="email" name="email" placeholder="your email address">
+					<div class="subscribe-btn icon purple">
+						<button>Subscribe</button>
+					</div>
+				</div>
+
 			</form>
 
 		</footer>
@@ -234,7 +243,10 @@
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script>window.jQuery || document.write( '<script src="bower_components/jquery/dist/jquery.min.js"><\/script>' )</script>
-
-<script src="js/main.js"></script>
+<script src="bower_components/classie/classie.js"></script>
+<script src="bower_components/jquery.event.move/js/jquery.event.move.js"></script>
+<script src="bower_components/jquery.event.swipe/js/jquery.event.swipe.js"></script>
+<script src="bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/build/production.min.js"></script>
 </body>
 </html>

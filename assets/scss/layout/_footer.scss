@@ -19,17 +19,14 @@
 	@include outer-container();
 	@extend .row;
 	text-align: center;
-margin-top: rem(40);
-margin-bottom: rem(40);
-h3 {
+	margin-top: rem(40);
+	margin-bottom: rem(40);
+	h3 {
 		font-size: rem(18);
 		font-weight: 300;
 		color: #ffffff;
 	}
 }
-
-
-
 
 .sticky-footer {
 	height: 234px;

@@ -11,16 +11,16 @@
 	max-width: rem(92);
 	display: inline-block;
 	width: rem(92);
-	@include media($large-screen){
+	@include media($large-screen) {
 		margin: rem(51) 0 rem(52);
 		width: 100%;
 	}
 }
 
 .page-header {
+	display: none;
 	@include media($medium-screen) {
 		position: relative;
-
 		z-index: 113;
 		display: block;
 		margin-bottom: rem(-184);

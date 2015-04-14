@@ -7,10 +7,10 @@
 	font-family: $sans-serif;
 	padding: rem(15) 0;
 	display: none;
-	@include media($medium-screen){
+	@include media($medium-screen) {
 		display: block;
 	}
-	@include media($large-screen){
+	@include media($large-screen) {
 		padding: rem(80) 0;
 	}
 	a {
@@ -36,7 +36,7 @@
 	Mobile Header
 -------------------------------------------------------------- */
 .ss-mobile-header {
-	background: white;
+	background: $mine;
 	width: 100%;
 	height: rem(49);
 	line-height: rem(20);
@@ -56,7 +56,7 @@
 	position: relative;
 	.mobile-header-content {
 		float: left;
-		width: rem(110);
+		width: rem(60);
 		height: 100%;
 		padding-left: rem(15);
 		padding-top: rem(10);
@@ -84,13 +84,18 @@
 	color: $gray;
 	a:hover,
 	a:focus {
-		color: $matisse;
+		color: $apple;
 		text-decoration: none;
 	}
 }
 
 .content-main {
 	position: relative;
+	padding-top: rem(49);
+
+	@include media($medium-screen) {
+		padding-top: 0;
+	}
 	&:before {
 		position: absolute;
 		top: 0;
@@ -124,19 +129,19 @@
 		right: 5px;
 		bottom: 5px;
 		left: 5px;
-		background: linear-gradient($gray 20%, transparent 20%, transparent 40%, $gray 40%, $gray 60%, transparent 60%, transparent 80%, $gray 80%);
+		background: linear-gradient($gray-light 20%, transparent 20%, transparent 40%, $gray-light 40%, $gray-light 60%, transparent 60%, transparent 80%, $gray-light 80%);
 		content: '';
 	}
 	&:hover {
 		&:before {
-			background: linear-gradient($gray-dark 20%, transparent 20%, transparent 40%, $gray-dark 40%, $gray-dark 60%, transparent 60%, transparent 80%, $gray-dark 80%);
+			background: linear-gradient($gray-lighter 20%, transparent 20%, transparent 40%, $gray-lighter 40%, $gray-lighter 60%, transparent 60%, transparent 80%, $gray-lighter 80%);
 		}
 	}
 }
 
 .ss-mobile-menu-wrapper {
 	position: fixed;
-	top: rem(48);
+	top: rem(49);
 	right: rem(-210);
 	z-index: 1001;
 	width: rem(210);
@@ -175,7 +180,7 @@
 	font-size: rem(16);
 	&:hover, &:focus {
 		text-decoration: none;
-		color: $matisse;
+		color: $apple;
 	}
 
 }
