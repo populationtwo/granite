@@ -3,7 +3,7 @@
 	$( document ).ready( function () {
 
 
-			$('').addClass('animated fadeIn');
+		$( '' ).addClass( 'animated fadeIn' );
 		//Declare all variables
 		var bodyElement = document.body,
 			$heroHeader = $( document.getElementById( 'hero-header' ) ),
@@ -17,7 +17,7 @@
 			numberAnimationIsExecuted = false,
 			$intro = $( '.hero-content' ),
 
-				isOpen = false;
+			isOpen = false;
 
 
 		/**
@@ -48,10 +48,9 @@
 
 		function checkIntroAnimation() {
 
-				$intro.addClass( 'animated fadeIn' );
+			$intro.addClass( 'animated fadeIn' );
 
 		}
-
 
 
 		/**
@@ -81,6 +80,10 @@
 		// Capture scroll events
 		$( window ).scroll( function () {
 			checkGraphAnimation();
+		} );
+
+		$( '.outer-wrapper' ).on( 'swipeleft', function (e) {
+			alert( 'asdfsdf' );
 		} );
 
 
